@@ -21,6 +21,8 @@ class PasswordChangeActivity : AppCompatActivity() {
 
         val action=supportActionBar
         action!!.title = "Password Change"
+        action.setDisplayHomeAsUpEnabled(true)
+        action.setDisplayHomeAsUpEnabled(true)
 
         newPasswordInput = findViewById(R.id.newPasswordEditText)
         submitButton = findViewById(R.id.passwordChangeButton)
@@ -43,6 +45,9 @@ class PasswordChangeActivity : AppCompatActivity() {
             }
 
         }
-
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

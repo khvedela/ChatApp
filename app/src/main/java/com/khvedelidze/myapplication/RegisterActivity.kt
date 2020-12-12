@@ -28,6 +28,8 @@ class RegisterActivity : AppCompatActivity() {
 
         val action=supportActionBar
         action!!.title = "Registration"
+        action.setDisplayHomeAsUpEnabled(true)
+        action.setDisplayHomeAsUpEnabled(true)
 
 
         mAuth = FirebaseAuth.getInstance()
@@ -59,6 +61,10 @@ class RegisterActivity : AppCompatActivity() {
 
         }
 
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
 }

@@ -20,6 +20,8 @@ class ResetActivity : AppCompatActivity() {
 
         val action=supportActionBar
         action!!.title = "Password Reset"
+        action.setDisplayHomeAsUpEnabled(true)
+        action.setDisplayHomeAsUpEnabled(true)
 
         mAuth = FirebaseAuth.getInstance()
 
@@ -43,5 +45,9 @@ class ResetActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

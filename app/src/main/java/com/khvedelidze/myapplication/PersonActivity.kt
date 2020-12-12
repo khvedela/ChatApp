@@ -22,6 +22,11 @@ class PersonActivity : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
 
+
+        val action = supportActionBar
+        action!!.title = "New Activity"
+
+
         userInfoTextView = findViewById(R.id.userInfoTextView)
         passwordChangeButton = findViewById(R.id.gotoChangePasswordButton)
         logoutButton =  findViewById(R.id.logoutButton)
