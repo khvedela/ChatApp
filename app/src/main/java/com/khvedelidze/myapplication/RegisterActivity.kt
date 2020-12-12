@@ -12,6 +12,7 @@ class RegisterActivity : AppCompatActivity() {
 
     private lateinit var inputEmail: EditText
     private lateinit var inputPassword: EditText
+    private lateinit var inputPassword2: EditText
     private lateinit var signUpButton: Button
 
     private lateinit var mAuth: FirebaseAuth
@@ -24,19 +25,21 @@ class RegisterActivity : AppCompatActivity() {
 
         inputEmail = findViewById(R.id.signUpEmailEditText)
         inputPassword = findViewById(R.id.signUpPasswordEditText)
+        inputPassword2 = findViewById(R.id.signUpPasswordEditText2)
         signUpButton = findViewById(R.id.signUpButton)
 
         signUpButton.setOnClickListener {
 
             val email = inputEmail.text.toString()
             val password = inputPassword.text.toString()
+            val password2 = inputPassword2.text.toString()
 
             if (email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Empty", Toast.LENGTH_LONG).show()
             } else {
                 mAuth.createUserWithEmailAndPassword(email,password)
                     .addOnCompleteListener { task ->
-                        if (task.isSuccessful) {
+                        if (password == password2) {
                             startActivity(Intent(this, MainActivity::class.java))
                             finish()
                         } else {

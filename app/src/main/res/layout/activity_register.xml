@@ -19,21 +19,49 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/signUpEmailEditText"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etPasswordLayout2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email"
-            android:ems="10"
-            android:inputType="textEmailAddress" />
+            android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/signUpPasswordEditText"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signUpEmailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etPasswordLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:ems="10"
-            android:inputType="textPassword" />
+            app:passwordToggleEnabled="true"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signUpPasswordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etPasswordLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signUpPasswordEditText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Repeat password"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/signUpButton"
