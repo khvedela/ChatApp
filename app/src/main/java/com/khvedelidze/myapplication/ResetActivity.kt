@@ -9,7 +9,6 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 
 class ResetActivity : AppCompatActivity() {
-
     private lateinit var mAuth: FirebaseAuth
 
     private lateinit var resetButton: Button
@@ -18,6 +17,9 @@ class ResetActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reset)
+
+        val action=supportActionBar
+        action!!.title = "Password Reset"
 
         mAuth = FirebaseAuth.getInstance()
 

@@ -1,11 +1,11 @@
 package com.khvedelidze.myapplication
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
+import android.widget.*
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         signInButton = findViewById(R.id.signInButton)
         registrationButton = findViewById(R.id.registrationButton)
         resetPasswordButton = findViewById(R.id.resetButton)
+
 
         signInButton.setOnClickListener {
 

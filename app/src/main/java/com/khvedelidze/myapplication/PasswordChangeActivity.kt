@@ -19,6 +19,9 @@ class PasswordChangeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_password_change)
 
+        val action=supportActionBar
+        action!!.title = "Password Change"
+
         newPasswordInput = findViewById(R.id.newPasswordEditText)
         submitButton = findViewById(R.id.passwordChangeButton)
 
