@@ -18,16 +18,9 @@ class PersonActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_person)
 
         mAuth = FirebaseAuth.getInstance()
-
-        if (mAuth.currentUser != null) {
-            startActivity(Intent(this, PersonActivity::class.java))
-            finish()
-        }
-
-
-        setContentView(R.layout.activity_person)
 
         userInfoTextView = findViewById(R.id.userInfoTextView)
         passwordChangeButton = findViewById(R.id.gotoChangePasswordButton)
