@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.zxing.BarcodeFormat
@@ -36,6 +37,8 @@ class PersonActivity : AppCompatActivity() {
             if (text.isNotBlank()) {
                 val bitmap = generateQRCode(text)
                 imageView.setImageBitmap(bitmap)
+            } else {
+                Toast.makeText(this, "Please enter text", Toast.LENGTH_SHORT).show()
             }
         }
 
